@@ -1,7 +1,3 @@
-Here's a personalized `README.md` for your solution to the Vendor A VPN access challenge, written in a clear, step-by-step DevOps project format:
-
----
-
 # 🛡️ VPN Access via Private IP SNAT for Kubernetes Services
 
 ## 🔍 Project Overview
@@ -35,6 +31,8 @@ I configured **Source NAT (SNAT)** using `iptables` on an EC2 instance connected
 ## 🛠️ Step-by-Step Implementation
 
 
+![Screenshot (321)](https://github.com/user-attachments/assets/07c0c59c-670e-424e-9ad2-dbd0caa2baf7)
+
 
 ### 1. 🔍 Identify Whitelisted Private IP
 
@@ -47,6 +45,7 @@ hostname -I
 I selected the IP `172.31.87.184` — which matches the EC2 hostname (`ip-172-31-87-184`) and is in the private VPC subnet.
 
 ---
+![Screenshot (320)](https://github.com/user-attachments/assets/8474b6ec-881c-49fa-bf65-0aed909b6068)
 
 ### 2. 🔧 Enable IP Forwarding
 
@@ -63,6 +62,7 @@ net.ipv4.ip_forward = 1
 ```
 
 ---
+![Uploading Screenshot (320).png…]()
 
 ### 3. 🔁 Add SNAT Rule via iptables
 
@@ -81,6 +81,7 @@ This ensures any connection to Vendor A looks like it came from `172.31.87.184`.
 Vendor A’s VPN is configured with a Site-to-Site VPN connection in AWS. This EC2 instance is part of the route table that handles traffic to Vendor A.
 
 ---
+![Screenshot (323)](https://github.com/user-attachments/assets/abd2becc-5138-4c1b-a4b9-8c3edda13dfb)
 
 ### 5. 🔁 Make iptables Persistent (Optional but Recommended)
 
