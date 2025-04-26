@@ -62,7 +62,8 @@ net.ipv4.ip_forward = 1
 ```
 
 ---
-![Uploading Screenshot (320).png…]()
+![Screenshot (320)](https://github.com/user-attachments/assets/5a00adb9-f438-4ee5-9493-9ce619aea554)
+
 
 ### 3. 🔁 Add SNAT Rule via iptables
 
